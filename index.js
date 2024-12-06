@@ -7,7 +7,11 @@ dotenv.config({
   path: "./.env",
 });
 
-const PORT = process.env.PORT || 8000;
+const port = process.env.PORT || 3000;
+app.listen(port, '0.0.0.0', () => {
+    console.log(`Server is running at http://174.129.177.110:${port}`);
+});
+
 
 // CONNECTION WITH DATABASE & RUN SERVER
 connectDB()
